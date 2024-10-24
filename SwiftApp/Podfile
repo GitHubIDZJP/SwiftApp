@@ -1,0 +1,57 @@
+# 版本部署
+ platform :ios, '13.0'
+
+target 'SwiftApp' do
+  # 添加第三方库
+  use_frameworks!
+  pod 'Moya','15.0.0' 
+  pod 'Alamofire','5.4.4'    #执行确切版本
+  pod 'SwiftyJSON','5.0.2'   #JSON处理
+  pod 'HandyJSON', '5.0.2'    #json处
+  pod 'ObjectMapper','4.2'  
+  pod 'MJRefresh','3.1.1' 
+  pod 'SDWebImage', '5.12.3'  
+  pod 'Masonry','1.1.0'
+  pod 'SnapKit', '~> 5.7' #适配
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
+  pod 'R.swift'
+  pod 'TZImagePickerController', '3.8.6' #选择图片 
+  
+  pod 'IQKeyboardManagerSwift','6.3.0' # 全局键盘
+
+  pod 'lottie-ios','4.5.0' #动画
+  pod 'Then','2.7.0' #语法糖
+  pod  'Reusable','4.1.2'
+  pod 'ReusableAuthentication', '0.8.0'
+
+  pod 'SwiftyBeaver', '1.9.0' #打日志
+  pod 'MBProgressHUD', '1.1.0'
+  pod 'WechatOpenSDK'  #微信登录 分享 社交
+
+  pod 'SwifterSwift','7.0.0' #Swift扩展库，包含了大量Swift内置数据类型和类的扩展（如Array， String, UIView， UIColor等
+  pod 'WCDB.swift' #微信数据库库
+pod 'AliyunOSSiOS', '2.10.12'
+pod 'VODUpload', '1.6.5'
+pod 'AliPlayerSDK_iOS', '5.3.0'
+pod 'AMapLocation-NO-IDFA', '2.8.0'
+pod 'AMapSearch-NO-IDFA', '8.1.0'
+pod  'FLAnimatedImage','1.0.12'
+
+	
+
+ 
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+     config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+      config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+      config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+    end
+  end
+end

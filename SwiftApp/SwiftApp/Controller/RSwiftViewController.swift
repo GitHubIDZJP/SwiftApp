@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import RswiftResources
+//import RswiftResources
 class RSwiftViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -26,5 +26,7 @@ class RSwiftViewController: UIViewController {
 //            
 //        }
 //        view.addSubview(imageView)
+        
+        
     }
 }

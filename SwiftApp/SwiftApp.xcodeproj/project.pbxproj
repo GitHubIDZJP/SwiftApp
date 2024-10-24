@@ -12,7 +12,6 @@
 		0401B30F2CC96699005933ED /* veil.json in Resources */ = {isa = PBXBuildFile; fileRef = 0401B30E2CC96699005933ED /* veil.json */; };
 		0401B3112CC96E1C005933ED /* SyntacticSugarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401B3102CC96E1C005933ED /* SyntacticSugarViewController.swift */; };
 		0401B3132CC97536005933ED /* RSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401B3122CC97536005933ED /* RSwiftViewController.swift */; };
-		0401B3602CC9869B005933ED /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401B35F2CC9869B005933ED /* R.generated.swift */; };
 		041F8F3E2CC8D6B200F53125 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F8F3D2CC8D6B200F53125 /* UserModel.swift */; };
 		041F8F412CC8D81000F53125 /* DBmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F8F402CC8D81000F53125 /* DBmanager.swift */; };
 		046461D92CC8331A003A123D /* 桥接.png in Resources */ = {isa = PBXBuildFile; fileRef = 046461D82CC8331A003A123D /* 桥接.png */; };
@@ -79,7 +78,6 @@
 		0401B30E2CC96699005933ED /* veil.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = veil.json; sourceTree = "<group>"; };
 		0401B3102CC96E1C005933ED /* SyntacticSugarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntacticSugarViewController.swift; sourceTree = "<group>"; };
 		0401B3122CC97536005933ED /* RSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSwiftViewController.swift; sourceTree = "<group>"; };
-		0401B35F2CC9869B005933ED /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = ../../../R.generated.swift; sourceTree = "<group>"; };
 		041F8F3D2CC8D6B200F53125 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		041F8F402CC8D81000F53125 /* DBmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBmanager.swift; sourceTree = "<group>"; };
 		046461D82CC8331A003A123D /* 桥接.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "桥接.png"; sourceTree = "<group>"; };
@@ -253,7 +251,6 @@
 		046461F82CC83F52003A123D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0401B35F2CC9869B005933ED /* R.generated.swift */,
 				046461EB2CC83F52003A123D /* AppDelegate+Extension.swift */,
 				046461EC2CC83F52003A123D /* Global.swift */,
 				046461ED2CC83F52003A123D /* HUDExpand.swift */,
@@ -607,7 +604,6 @@
 				041F8F3E2CC8D6B200F53125 /* UserModel.swift in Sources */,
 				046462142CC85412003A123D /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				046461FB2CC83F52003A123D /* HUDExpand.swift in Sources */,
-				0401B3602CC9869B005933ED /* R.generated.swift in Sources */,
 				046461FE2CC83F52003A123D /* UIButton+Extension.swift in Sources */,
 				0401B3112CC96E1C005933ED /* SyntacticSugarViewController.swift in Sources */,
 				0401B30D2CC96682005933ED /* LottieHUD.swift in Sources */,

@@ -37,6 +37,7 @@ AbstractHandle::AbstractHandle()
 : m_handle(nullptr)
 , m_customOpenFlag(0)
 , m_tag(Tag::invalid())
+, m_enableLiteMode(false)
 , m_transactionLevel(0)
 , m_transactionError(TransactionError::Allowed)
 , m_cacheTransactionError(TransactionError::Allowed)
@@ -196,6 +197,16 @@ void AbstractHandle::enableWriteMainDB(bool enable)
 bool AbstractHandle::canWriteMainDB()
 {
     return m_customOpenFlag & SQLITE_OPEN_READWRITE;
+}
+
+void AbstractHandle::setLiteModeEnable(bool enable)
+{
+    m_enableLiteMode = enable;
+}
+
+bool AbstractHandle::liteModeEnable() const
+{
+    return m_enableLiteMode;
 }
 
 int AbstractHandle::getChanges()
@@ -567,6 +578,11 @@ bool AbstractHandle::commitTransaction()
 
 void AbstractHandle::rollbackTransaction()
 {
+    if (m_enableLiteMode) {
+        notifyError(Error::Code::Misuse, "", "Can not execute rollback in a database without rollback journal.");
+        commitTransaction();
+        return;
+    }
     bool succeed = true;
     if (m_transactionLevel > 1) {
         if (m_transactionError == TransactionError::Allowed && isInTransaction()) {
@@ -1005,6 +1021,17 @@ bool AbstractHandle::setCipherSalt(const UnsafeStringView &salt)
 void AbstractHandle::tryPreloadAllPages()
 {
     sqlite3_preload_pages_to_cache(m_handle);
+}
+
+void AbstractHandle::setFileChunkSize(int size)
+{
+    WCTAssert(isOpened());
+    if (size < SQLITE_DEFAULT_PAGE_SIZE) {
+        return;
+    }
+    size = size / SQLITE_DEFAULT_PAGE_SIZE * SQLITE_DEFAULT_PAGE_SIZE;
+    sqlite3_file_control(
+    m_handle, Syntax::mainSchema.data(), SQLITE_FCNTL_CHUNK_SIZE, &size);
 }
 
 } //namespace WCDB

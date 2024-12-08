@@ -79,7 +79,7 @@ PODS:
   - TZImagePickerController/Location (3.8.6)
   - VODUpload (1.6.5):
     - AliyunOSSiOS
-  - WCDB.swift (2.1.8):
+  - WCDB.swift (2.1.9):
     - WCDBOptimizedSQLCipher (= 1.4.6)
   - WCDBOptimizedSQLCipher (1.4.6)
   - WechatOpenSDK (2.0.4)
@@ -99,7 +99,7 @@ DEPENDENCIES:
   - MJRefresh (= 3.1.1)
   - Moya (= 15.0.0)
   - ObjectMapper (= 4.2)
-  - R.swift
+  - R.swift (= 7.7.0)
   - Reusable (= 4.1.2)
   - ReusableAuthentication (= 0.8.0)
   - RxCocoa (= 6.5.0)
@@ -116,7 +116,7 @@ DEPENDENCIES:
   - WechatOpenSDK
 
 SPEC REPOS:
-  trunk:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - Alamofire
     - AliPlayerSDK_iOS
     - AliyunOSSiOS
@@ -180,10 +180,10 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   TZImagePickerController: a013c186415f6044914bb0d0dd960a884cff46ec
   VODUpload: 15c9ce1935fe39dca8100a1239e4d661c5e6d406
-  WCDB.swift: 603b32d432a58ec2e6eef8965d8bd6bb3cc7c39a
+  WCDB.swift: 64f662eddd53dfc1c8f821f8090b5b9ab3586882
   WCDBOptimizedSQLCipher: c6451e1dead7ec53e1344a2545aaed2c4c139fc0
   WechatOpenSDK: 290989072e87b79d52225a01bb4e5e58f6f88593
 
-PODFILE CHECKSUM: 0c1313100ed511723aa5e2e1864845d15a5feaa5
+PODFILE CHECKSUM: 4747b478889c8f4ce66cfeb68f71d69ac6571406
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

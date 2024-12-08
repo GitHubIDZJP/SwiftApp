@@ -1,5 +1,7 @@
+
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 # 版本部署
- platform :ios, '13.0'
+# platform :ios, '14.0'
 
 target 'SwiftApp' do
   # 添加第三方库
@@ -15,7 +17,7 @@ target 'SwiftApp' do
   pod 'SnapKit', '~> 5.7' #适配
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
-  pod 'R.swift'
+  pod 'R.swift','7.7.0'
   pod 'TZImagePickerController', '3.8.6' #选择图片 
   
   pod 'IQKeyboardManagerSwift','6.3.0' # 全局键盘
@@ -47,7 +49,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-     config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+     config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.0'
       config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
       config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
       config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
